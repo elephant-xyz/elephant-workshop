@@ -14,7 +14,17 @@ Ensure you have the following:
 
 ## Getting Started
 
-### 1. Create the Environment File
+### 1. Clone the Repository
+
+Clone the repository from GitHub:
+
+```bash
+git clone git@github.com:elephant-xyz/elephant-workshop.git
+cd elephant-workshop
+
+```
+
+### 2. Create the Environment File
 
 First, copy the example environment file to create your `.env`:
 
@@ -22,7 +32,7 @@ First, copy the example environment file to create your `.env`:
 cp .env.example .env
 ```
 
-### 2. Configure Environment Variables
+### 3. Configure Environment Variables
 
 Edit the `.env` file and update the following variables:
 
@@ -54,7 +64,7 @@ Each subdirectory is named after the v0 CID of the root property file. Files wit
 
 ## Working with IPFS
 
-### 3. Upload and Validate Files
+### 4. Upload and Validate Files
 
 Use the Elephant CLI to validate and upload files to IPFS:
 
@@ -64,7 +74,7 @@ npx @elephant-xyz/cli validate-and-upload ./data/ --output-csv upload-results.cs
 
 This command validates the data in the `./data/` directory and uploads valid files to IPFS, generating an output file named `upload-results.csv`.
 
-### 4. Submit Data to Contract
+### 5. Submit Data to Contract
 
 After successfully uploading files, submit the data to the Elephant Protocol smart contract:
 
