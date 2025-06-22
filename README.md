@@ -1,0 +1,89 @@
+# Elephant CLI Workshop Guide
+
+This document provides step-by-step instructions for interacting with the Elephant Protocol using the Elephant CLI tool.
+
+## Prerequisites
+
+Ensure you have the following:
+
+- Node.js 22+
+- `npx` (comes bundled with Node.js)
+- Exported private keys
+- Account on Polygon with some POL balance (you can set this up via [MetaMask](https://metamask.io/))
+- Pinata JWT token ([Create an account on Pinata](https://pinata.cloud/))
+
+## Getting Started
+
+### 1. Create the Environment File
+
+First, copy the example environment file to create your `.env`:
+
+```bash
+cp .env.example .env
+```
+
+### 2. Configure Environment Variables
+
+Edit the `.env` file and update the following variables:
+
+- **PINATA_JWT**: Your Pinata JWT Token
+- **PRIVATE_KEY**: Your private key for transaction signing
+
+Example:
+
+```env
+PINATA_JWT="your-pinata-jwt"
+PRIVATE_KEY="your-private-key"
+```
+
+## Data Directory Structure
+
+The `data` directory should follow this structure:
+
+```
+data
+└── QmZZTvdeTonx7pGvo1Mf3Tt99mKRRtJtVUcytejZoYPKg4
+    ├── Qmevin8Lnpt9i7N8K75Mw6auEzZWirsrYWn9jAeKu2soEs.json
+    ├── QmfGud78cz6WWgNkhymBBBfvY1vty4Ri7iHvDkiZYMrCrz.json
+    ├── QmPr4G8Jvz5UqEWz7QLZPWr3fpMgxC7MQS5twR7j5qzzyu.json
+    ├── QmPVamV7C9V7PbHquQa5MzQ8UyAT214TpsZkjhLo6LLxcG.json
+    └── QmTTTSdvryWnLyqL5L7omMzCVHeo76a2p2PBdpZ31rgSsd.json
+```
+
+Each subdirectory is named after the v0 CID of the root property file. Files within each subdirectory are named after the v0 CID of the schema they represent.
+
+## Working with IPFS
+
+### 3. Upload and Validate Files
+
+Use the Elephant CLI to validate and upload files to IPFS:
+
+```bash
+npx @elephant-xyz/cli validate-and-upload ./data/ --output-csv upload-results.csv
+```
+
+This command validates the data in the `./data/` directory and uploads valid files to IPFS, generating an output file named `upload-results.csv`.
+
+### 4. Submit Data to Contract
+
+After successfully uploading files, submit the data to the Elephant Protocol smart contract:
+
+```bash
+npx @elephant-xyz/cli submit-to-contract upload-results.csv
+```
+
+This final step registers your data with the Elephant Protocol.
+
+## What is Pinata?
+
+Pinata is an IPFS pinning service provider, which allows you to easily upload and manage your files on the IPFS network. For more information and to create an account, visit [Pinata.cloud](https://pinata.cloud/).
+
+## Troubleshooting
+
+For any issues, please verify your environment configurations and ensure dependencies are correctly installed.
+
+## Additional Resources
+
+- [Elephant CLI Documentation](https://github.com/elephant-xyz/elephant-cli?tab=readme-ov-file#elephant-network-cli)
+- [Pinata](https://pinata.cloud/)
+- [MetaMask Wallet](https://metamask.io/)

@@ -1,0 +1,14 @@
+[
+  {
+    "sales_date": "2024-03-14",
+    "sales_transaction_amount": 319999.0
+  },
+  {
+    "sales_date": "2023-09-05",
+    "sales_transaction_amount": 1653600.0
+  },
+  {
+    "sales_date": "2022-07-18",
+    "sales_transaction_amount": 0.0
+  }
+]
