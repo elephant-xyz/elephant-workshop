@@ -1,1 +1,5 @@
 .env
+submit_errors.csv
+submit_warnings.csv
+elephant-cli.log
+upload-results.csv

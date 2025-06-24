@@ -6,30 +6,53 @@ This document provides step-by-step instructions for interacting with the Elepha
 
 Ensure you have the following:
 
-- Node.js 22+
-- `npx` (comes bundled with Node.js)
-- Exported private keys
-- Account on Polygon with some POL balance (you can set this up via [MetaMask](https://metamask.io/))
-- Pinata JWT token ([Create an account on Pinata](https://pinata.cloud/))
+* Node.js 22+
+* `npx` (comes bundled with Node.js)
+* Exported private keys
+* Account on Polygon with some POL balance (you can set this up via [MetaMask](https://metamask.io/))
+* Pinata JWT token ([Create an account on Pinata](https://pinata.cloud/))
 
 ## Getting Started
+
+### Windows Users
+
+* Install Git for Windows: [Git for Windows](https://git-scm.com/download/win).
+* Use Command Prompt, PowerShell, or Git Bash for executing commands.
+
+### Linux/macOS Users
+
+Use Terminal for executing commands.
 
 ### 1. Clone the Repository
 
 Clone the repository from GitHub:
 
+* For Linux/macOS:
+
 ```bash
 git clone git@github.com:elephant-xyz/elephant-workshop.git
 cd elephant-workshop
+```
 
+* For Windows:
+
+```bash
+git clone https://github.com/elephant-xyz/elephant-workshop.git
+cd elephant-workshop
 ```
 
 ### 2. Create the Environment File
 
-First, copy the example environment file to create your `.env`:
+* For Linux/macOS:
 
 ```bash
 cp .env.example .env
+```
+
+* For Windows (Command Prompt):
+
+```cmd
+copy .env.example .env
 ```
 
 ### 3. Configure Environment Variables
@@ -69,7 +92,7 @@ Each subdirectory is named after the v0 CID of the root property file. Files wit
 Use the Elephant CLI to validate and upload files to IPFS:
 
 ```bash
-npx @elephant-xyz/cli validate-and-upload ./data/ --output-csv upload-results.csv
+npx @elephant-xyz/cli validate-and-upload ./data/ upload-results.csv
 ```
 
 This command validates the data in the `./data/` directory and uploads valid files to IPFS, generating an output file named `upload-results.csv`.
@@ -79,7 +102,7 @@ This command validates the data in the `./data/` directory and uploads valid fil
 After successfully uploading files, submit the data to the Elephant Protocol smart contract:
 
 ```bash
-npx @elephant-xyz/cli submit-to-contract upload-results.csv
+elephant-cli submit-to-contract upload-results.csv
 ```
 
 This final step registers your data with the Elephant Protocol.
@@ -94,6 +117,7 @@ For any issues, please verify your environment configurations and ensure depende
 
 ## Additional Resources
 
-- [Elephant CLI Documentation](https://github.com/elephant-xyz/elephant-cli?tab=readme-ov-file#elephant-network-cli)
-- [Pinata](https://pinata.cloud/)
-- [MetaMask Wallet](https://metamask.io/)
+* [Elephant CLI Documentation](https://elephant.xyz/docs)
+* [Pinata](https://pinata.cloud/)
+* [MetaMask Wallet](https://metamask.io/)
+* [Git for Windows](https://git-scm.com/download/win)
