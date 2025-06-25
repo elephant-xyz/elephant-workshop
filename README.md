@@ -6,18 +6,38 @@ This document provides step-by-step instructions for interacting with the Elepha
 
 Ensure you have the following:
 
-* Node.js 22+
-* `npx` (comes bundled with Node.js)
-* Exported private keys
-* Account on Polygon with some POL balance (you can set this up via [MetaMask](https://metamask.io/))
-* Pinata JWT token ([Create an account on Pinata](https://pinata.cloud/))
+- Node.js 22+ ([Download Node.js](https://nodejs.org/))
+- `npx` (comes bundled with Node.js)
+- Exported private keys
+- Account on Polygon with some POL balance (you can set this up via [MetaMask](https://metamask.io/))
+- Pinata JWT token ([Create an account on Pinata](https://pinata.cloud/))
 
 ## Getting Started
 
 ### Windows Users
 
-* Install Git for Windows: [Git for Windows](https://git-scm.com/download/win).
-* Use Command Prompt, PowerShell, or Git Bash for executing commands.
+- **Option 1: Using Git**
+
+  - Install [Git for Windows](https://git-scm.com/download/win).
+  - Use Git Bash, Command Prompt, or PowerShell for executing commands.
+
+- **Option 2: Downloading Zip**
+
+  - Download the repository as a ZIP file from [Elephant Workshop GitHub](https://github.com/elephant-xyz/elephant-workshop).
+  - Extract the ZIP file to a convenient location.
+
+- **Install Node.js**
+
+  - Download and install Node.js from the [official site](https://nodejs.org/).
+  - After installation, open PowerShell and execute:
+
+    ```powershell
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+    ```
+
+- **Terminal Application**
+
+  - Use [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) for an enhanced command-line experience.
 
 ### Linux/macOS Users
 
@@ -25,16 +45,14 @@ Use Terminal for executing commands.
 
 ### 1. Clone the Repository
 
-Clone the repository from GitHub:
-
-* For Linux/macOS:
+- For Linux/macOS:
 
 ```bash
 git clone git@github.com:elephant-xyz/elephant-workshop.git
 cd elephant-workshop
 ```
 
-* For Windows:
+- For Windows (Git):
 
 ```bash
 git clone https://github.com/elephant-xyz/elephant-workshop.git
@@ -43,15 +61,15 @@ cd elephant-workshop
 
 ### 2. Create the Environment File
 
-* For Linux/macOS:
+- For Linux/macOS:
 
 ```bash
 cp .env.example .env
 ```
 
-* For Windows (Command Prompt):
+- For Windows (Command Prompt or PowerShell):
 
-```cmd
+```powershell
 copy .env.example .env
 ```
 
@@ -117,7 +135,9 @@ For any issues, please verify your environment configurations and ensure depende
 
 ## Additional Resources
 
-* [Elephant CLI Documentation](https://elephant.xyz/docs)
-* [Pinata](https://pinata.cloud/)
-* [MetaMask Wallet](https://metamask.io/)
-* [Git for Windows](https://git-scm.com/download/win)
+- [Elephant CLI Documentation](https://elephant.xyz/docs)
+- [Pinata](https://pinata.cloud/)
+- [MetaMask Wallet](https://metamask.io/)
+- [Git for Windows](https://git-scm.com/download/win)
+- [Node.js](https://nodejs.org/)
+- [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
