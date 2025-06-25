@@ -120,7 +120,7 @@ This command validates the data in the `./data/` directory and uploads valid fil
 After successfully uploading files, submit the data to the Elephant Protocol smart contract:
 
 ```bash
-elephant-cli submit-to-contract upload-results.csv
+npx @elephant-xyz/cli submit-to-contract upload-results.csv
 ```
 
 This final step registers your data with the Elephant Protocol.
