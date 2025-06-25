@@ -1,0 +1,34 @@
+[
+  {
+    "company_name": "CARPINI ANDREW DELLI TR",
+    "first_name": null,
+    "last_name": null,
+    "middle_name": null,
+    "prefix_name": null,
+    "raw_name": null,
+    "suffix_name": null,
+    "mailing_address": {
+      "address_line_1": "21 LORI DR",
+      "city_name": "NORTH PROVIDENCE",
+      "country_name": "USA",
+      "postal_code": "02911",
+      "state_code": "RI"
+    }
+  },
+  {
+    "company_name": "PASQUALE DELLI CARPINI TRUST",
+    "first_name": null,
+    "last_name": null,
+    "middle_name": null,
+    "prefix_name": null,
+    "raw_name": null,
+    "suffix_name": null,
+    "mailing_address": {
+      "address_line_1": "21 LORI DR",
+      "city_name": "NORTH PROVIDENCE",
+      "country_name": "USA",
+      "postal_code": "02911",
+      "state_code": "RI"
+    }
+  }
+]
